@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2C1-h7-IlP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleColorEmoji@2x.ttc">
+            <string>AppleColorEmoji</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Video-->
+        <scene sceneID="RkH-Ev-1FW">
+            <objects>
+                <viewController id="inn-o7-mem" customClass="VideoVC" customModule="TabBarCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KVK-0B-7vY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KT3-TH-NHL">
+                                <rect key="frame" x="125" y="318" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click to play video"/>
+                                <connections>
+                                    <action selector="btnPlayAction:" destination="inn-o7-mem" eventType="touchUpInside" id="1sP-hq-aom"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hEG-Z5-ITG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="Video.png" id="s5L-V9-yOr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qw-gT-tRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="342"/>
+        </scene>
+        <!--Books-->
+        <scene sceneID="ukJ-2g-Ulk">
+            <objects>
+                <collectionViewController id="8WZ-uq-0EN" customClass="BooksCVC" customModule="TabBarCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ty7-vd-uJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Dq-Yb-Avm">
+                            <size key="itemSize" width="369" height="400"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="una-ZC-AQV" customClass="BookCell" customModule="TabBarCollection" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="133.5" width="369" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="400"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NX-3l-tr5">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="293"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNi-4E-dG0">
+                                            <rect key="frame" x="0.0" y="290" width="369" height="110"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="34"/>
+                                            <color key="textColor" red="1" green="0.484969449870994" blue="0.55471193503413996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="imageBook" destination="2NX-3l-tr5" id="XRA-hw-XK8"/>
+                                    <outlet property="lblBookTitle" destination="LNi-4E-dG0" id="Djd-Zz-BMh"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8WZ-uq-0EN" id="3Yt-Ip-DKZ"/>
+                            <outlet property="delegate" destination="8WZ-uq-0EN" id="Frd-oL-YHK"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Books" image="Books.png" id="6C8-1O-mr6"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUj-ob-5Lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-350"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZKR-ha-kJO">
+            <objects>
+                <tabBarController id="2C1-h7-IlP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lt6-aQ-PQm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8WZ-uq-0EN" kind="relationship" relationship="viewControllers" id="CV4-qa-qOn"/>
+                        <segue destination="inn-o7-mem" kind="relationship" relationship="viewControllers" id="eAl-TS-zng"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfr-Do-LdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Books.png" width="25" height="25"/>
+        <image name="Video.png" width="25" height="25"/>
+    </resources>
+</document>
